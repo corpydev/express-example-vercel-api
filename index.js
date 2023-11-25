@@ -1,8 +1,8 @@
 import express from "express";
 import cors from "cors";
-import swaggerUi from "swagger-ui-express";
-import swaggerDocument from "./swagger.json" assert { type: "json" };
-import { addAppRouters } from "./src/app/index.js";
+// import swaggerUi from "swagger-ui-express";
+// import swaggerDocument from "./swagger.json";
+// import { addAppRouters } from "./src/app/index.js";
 import morgan from "morgan";
 
 const app = express();

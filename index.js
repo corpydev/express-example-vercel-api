@@ -15,19 +15,17 @@ app.get("/", (req, res) => {
   res.send({ message: "Welcome to api!" });
 });
 
-app.all("/api", (req, res) => {
-  res.send({ message: "Welcome to api!" });
-});
+// app.all("/api", (req, res) => {
+//   res.send({ message: "Welcome to api!" });
+// });
 
-app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerDocument));
+// app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 
-const routes = await addAppRouters();
-app.use("/api", routes);
+// const routes = await addAppRouters();
+// app.use("/api", routes);
 
 const port = process.env.port || 3333;
 const server = app.listen(port, () => {
   console.log(`Listening at http://localhost:${port}`);
 });
 server.on("error", console.error);
-
-module.exports = app;
